@@ -10,6 +10,9 @@ print()
 print("Welcome to the dungeon!")
 
 
+door_greeting = {1:"Welcome to paradise!", 2:"Welcome to hell!"}
+
+
 def wrong_input():
     print("Hey, the input is wrong!")
 
@@ -20,6 +23,7 @@ def death_message():
         print(num)
         time.sleep(1)
     print("meters!")
+    time.sleep(2)
     print("You are dead.")
 
 
@@ -32,6 +36,8 @@ print("Do you go through door 1 or door 2?")
 door = input("> ")
 
 if door == "1":
+    print(door_greeting[1])
+
     print(f"Hey! Your friend {friends[random.randint(0,3)]} is here!")
 
     print("There is a nice vampire asking you if you enjoy life.")
@@ -49,6 +55,8 @@ if door == "1":
         print("You are not so good with numbers, are you?")
 
 elif door == "2":
+    print(door_greeting[2])
+
     print("There is a giant spider asking you if you prefer night or day.")
     print("What do you reply?")
     print("1. Night")
